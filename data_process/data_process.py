@@ -161,10 +161,12 @@ def thread_drugbank_dict(database, step, save_csv = False):
         dict_to_csv(dict_drug_final, 'dict_drug.csv')
         dict_to_csv(dict_uniprot_final, 'dict_uniprot.csv')
         dict_to_csv(dict_both_final, 'dict_both.csv')
-
+    else:
+        pass
     end  = time.time()
     ### Print status ###
     print(f"Dict Process time: {round((end - start_time)/60 , 2)}") # 2309.532948255539 old 1000 chat -> 11min
     print ("===== END Thread Drugbank ====")
+    
     return dict_drug_final, dict_uniprot_final, dict_both_final
 
