@@ -83,8 +83,7 @@ df.to_csv("dict_drug.csv", index = False)
 print(df)
 
 
-end  = time.time()
-print(f"Dict Process time: {end - start}")
+
 
 
 

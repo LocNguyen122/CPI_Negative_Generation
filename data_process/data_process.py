@@ -137,7 +137,6 @@ class extract_dict_drugbank(Thread):
 ########################################
 
 def thread_drugbank_dict(database, step, save_csv = False):
-    start_time = time.time()
     # Split idx 
     idx_ls = [t for t in range(0, len(database), step)]
     idx_ls.append(len(database) - 1)
