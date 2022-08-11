@@ -154,17 +154,17 @@ def thread_drugbank_dict(database, step, save_csv = False):
     ### Saving file ###
     if save_csv == True:
     # Merge all dict in list -> type dict
-        dict_drug       = merge_list_dict(dict_drug_ls)
-        dict_uniprot    = merge_list_dict(dict_uniprot_ls)
-        dict_both       = merge_list_dict(dict_both_ls)
+        dict_drug_final       = merge_list_dict(dict_drug_ls)
+        dict_uniprot_final    = merge_list_dict(dict_uniprot_ls)
+        dict_both_final       = merge_list_dict(dict_both_ls)
     # Save dict 2 csv
-        dict_to_csv(dict_drug, 'dict_drug.csv')
-        dict_to_csv(dict_uniprot, 'dict_uniprot.csv')
-        dict_to_csv(dict_both, 'dict_both.csv')
+        dict_to_csv(dict_drug_final, 'dict_drug.csv')
+        dict_to_csv(dict_uniprot_final, 'dict_uniprot.csv')
+        dict_to_csv(dict_both_final, 'dict_both.csv')
 
     end  = time.time()
     ### Print status ###
     print(f"Dict Process time: {round((end - start_time)/60 , 2)}") # 2309.532948255539 old 1000 chat -> 11min
     print ("===== END Thread Drugbank ====")
-    return dict_drug, dict_uniprot, dict_both
+    return dict_drug_final, dict_uniprot_final, dict_both_final
 
